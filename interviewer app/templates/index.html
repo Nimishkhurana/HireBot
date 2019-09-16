@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+   h2{
+       margin:50px;
+   }
+    </style>
+    
+</head>
+<body>
+          
+    <h2>Profile Summary of Nimish Khurana</h2>
+
+   
+    <div id="myDiv" style="width:1000px;height:500px;"></div>
+
+    <h2>
+        Questions
+    </h2>
+
+    <h3> Question 1: What are you weaknesses/regrets?</h3>
+    <div id='ans1'>
+        {{txt1}}
+    </div>
+    <h3> Question 2: What is your biggest failure?</h3>
+    <div id='ans2'>
+        {{txt2}}
+    </div>
+    <h3> Question 3:What are your strengths?</h3>
+    <div id='ans2'>
+        {{txt3}}
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script>
+    <script>
+    console.log("hello");
+        
+    
+    var trace1 = {
+    x:  ['Ques1','Ques2','Ques3'],
+    y: {{res['Analytical']}},
+    name: 'Analytical',
+    type: 'bar'
+    };
+
+    var trace2 = {
+    x: ['Ques1','Ques2','Ques3'],
+    y: {{res['Tentative']}},
+    name: 'Tentaive',
+    type: 'bar'
+    };
+
+    var trace3 = {
+    x: ['Ques1','Ques2','Ques3'],
+    y: {{res['Sadness']}},
+    name: 'Sadness',
+    type: 'bar'
+    };
+
+    var trace4 = {
+    x: ['Ques1','Ques2','Ques3'],
+    y: {{res['Joy']}},
+    name: 'Joy',
+    type: 'bar'
+    };
+
+    var trace5 = {
+    x: ['Ques1','Ques2','Ques3'],
+    y: {{res['Confident']}},
+    name: 'Confident',
+    type: 'bar'
+    };
+
+
+var data = [trace1, trace2, trace3,trace4,trace5];
+
+var layout = {barmode: 'group'};
+
+Plotly.newPlot('myDiv', data, layout);
+
+
+// var data2 = [{
+//   values: [72,28],
+//   labels: ['Confidence','Tentativeness'],
+//   type: 'pie'
+// }];
+
+// var layout2 = {
+//   height: 400,
+//   width: 500
+// };
+
+// Plotly.newPlot('myDiv2', data2, layout2);
+        </script> 
+</body>
+</html>

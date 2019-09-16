@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+ *  Copyright (c) 2015 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+-->
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="WebRTC code samples">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+    <meta itemprop="description" content="Client-side WebRTC code samples">
+    <meta itemprop="image" content="../../../images/webrtc-icon-192x192.png">
+    <meta itemprop="name" content="WebRTC code samples">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta id="theme-color" name="theme-color" content="#ffffff">
+
+    <base target="_blank">
+
+    <title>Hire Bot</title>
+
+    <link rel="icon" sizes="192x192" href="../../../images/webrtc-icon-192x192.png">
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+
+<body>
+
+<div id="container">
+    <div id="demo"></div>
+    <h1><a href="//webrtc.github.io/samples/" title="WebRTC samples homepage">Hire Bot</a>
+        <span>SmartHiring</span></h1>
+
+    <p id='info'>Please read the question carefully. You have 30 seconds to read the question </p>
+    <br>
+    <h3> Question 1: What are your weaknesses/regrets?</h3>
+    <br>
+    <video height="500" width="2000" id="gum" playsinline autoplay muted></video>
+    <!-- <video id="recorded" playsinline loop></video> -->
+
+    <div>
+        <!-- <button id="start">Start camera</button> -->
+        <button id="record" >Stop Recording</button>
+        <!-- <button id="play" disabled>Play</button> -->
+    </div>
+
+    <div>
+        <h4>Media Stream Constraints options</h4>
+        <p>Echo cancellation: <input type="checkbox" id="echoCancellation"></p>
+    </div>
+
+    <div>
+        <span id="errorMsg"></span>
+    </div>
+
+    
+</div>
+
+<!-- include adapter for srcObject shim -->
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="main_.js" async></script>
+<script src="../../../js/lib/ga.js"></script>
+
+</body>
+</html>
