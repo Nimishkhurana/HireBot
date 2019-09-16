@@ -23,7 +23,7 @@ import json
 
 
 speech_to_text = SpeechToTextV1(
-    iam_apikey='8QC2euc5SaE7PLLPr8iExUJOXMbEzd2yhtZ4IhGfdvci',
+    iam_apikey='API_KEY',
     url='https://gateway-lon.watsonplatform.net/speech-to-text/api'
 )
 
