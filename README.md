@@ -1,5 +1,5 @@
 # HireBot
-HireBot prototype built in Eduwaive Foundation Internal Hackathon
+HireBot MVP built in Eduwaive Foundation Internal Hackathon
 
 The complete process is not yet automated as this was just made for hackathon. Different scripts have to be triggered explicitely such as for recording, audio analysis, video analysis and create interviewer Dashboard.
 
